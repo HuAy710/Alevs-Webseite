@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tagMe — Content Studio Berlin | Fotografie, Video &amp; Social Media</title>
+  <meta name="description" content="tagMe ist ein Berliner Creative Studio für Cafés, Restaurants, Hotels und Beauty-Brands. Fotografie, Reels, Social-Media-Content und Community Management von Alev Ayhan.">
+
+  <!-- Google Fonts: Fraunces (Editorial-Display) & Inter (klare Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ LADEANIMATION ============ -->
+  <div id="loader" aria-hidden="true">
+    <span class="loader-tag">#tagMe</span>
+  </div>
+
+  <!-- ============ SKIP LINK (Barrierefreiheit) ============ -->
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="tagMe Startseite">tag<span class="nav-logo-accent">Me</span></a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
+        <a href="#arbeiten" class="nav-link">Arbeiten</a>
+        <a href="#leistungen" class="nav-link">Leistungen</a>
+        <a href="#preise" class="nav-link">Preise</a>
+        <a href="#ueber-mich" class="nav-link">Über mich</a>
+        <a href="#kontakt" class="nav-link nav-link-cta">Kontakt</a>
+      </nav>
+
+      <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-fade"><span class="tag-chip">#berlin</span> Content Studio</p>
+          <h1 class="hero-title">
+            <span class="line">Content,</span>
+            <span class="line">den man <em>gerne</em></span>
+            <span class="line">taggt.</span>
+          </h1>
+          <p class="hero-text reveal-fade">
+            tagMe erstellt authentische Fotos, Videos und Social-Media-Content für
+            Cafés, Restaurants, Hotels, Beauty-Brands und lokale Unternehmen — mit
+            echtem Blick für das, was deinen Ort besonders macht.
+          </p>
+          <div class="hero-actions reveal-fade">
+            <a href="#arbeiten" class="btn btn-primary">Arbeiten ansehen</a>
+            <a href="#kontakt" class="btn btn-outline">Projekt anfragen</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Später durch eigenes Hero-Bild von tagMe ersetzen (z. B. Fotoshooting in einem Berliner Café) -->
+          <div class="hero-collage">
+            <img
+              class="hero-img hero-img-main"
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=900&auto=format&fit=crop"
+              alt="Warm beleuchtetes Café in Berlin mit Gästen an Holztischen"
+              loading="lazy"
+            >
+            <img
+              class="hero-img hero-img-small"
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop"
+              alt="Nahaufnahme von liebevoll angerichtetem Essen"
+              loading="lazy"
+            >
+            <span class="sticker sticker-one">@tagme.berlin</span>
+            <span class="sticker sticker-two">shot on set</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="scroll-indicator" id="scrollIndicator" aria-label="Nach unten scrollen">
+        <span class="scroll-indicator-line"></span>
+        <span class="scroll-indicator-text">scroll</span>
+      </button>
+    </section>
+
+    <!-- ============ BRANCHEN MARQUEE ============ -->
+    <section class="industries" aria-label="Branchen, für die tagMe arbeitet">
+      <div class="marquee">
+        <div class="marquee-track" id="marqueeTrack">
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <!-- Duplikat für nahtlose Laufschrift -->
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO / ARBEITEN ============ -->
+    <section class="portfolio" id="arbeiten">
+      <div class="section-inner">
+        <p class="eyebrow reveal-fade"><span class="tag-chip">#arbeiten</span></p>
+        <h2 class="section-title reveal-fade">Ausgewählte Projekte</h2>
+        <p class="section-lead reveal-fade">
+          Ein Einblick in Marken, die wir sichtbar gemacht haben. Platzhalterbilder —
+          werden durch eigene tagMe-Projekte ersetzt.
+        </p>
+
+        <div class="portfolio-grid">
+
+          <!-- Später durch eigenes Café-Projekt von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade portfolio-item-tall">
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=900&auto=format&fit=crop" alt="Barista bereitet Kaffee in einem modernen Berliner Café zu" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Kiez Kaffee</span>
+              <span class="tag-chip tag-chip-dark">Café</span>
+              <span class="portfolio-service">Foto &amp; Video</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenes Restaurant-Projekt von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Stilvoll gedeckter Tisch in einem Berliner Restaurant" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Novo Trattoria</span>
+              <span class="tag-chip tag-chip-dark">Restaurant</span>
+              <span class="portfolio-service">Social Media Content</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenes Hotel-Projekt von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade">
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=800&auto=format&fit=crop" alt="Ruhiges Zimmer eines Boutique-Hotels mit natürlichem Licht" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Hotel Amelie</span>
+              <span class="tag-chip tag-chip-dark">Hotel</span>
+              <span class="portfolio-service">Foto Content</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenes Beauty-Projekt von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade portfolio-item-tall">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=900&auto=format&fit=crop" alt="Behandlungsraum eines minimalistisch eingerichteten Beauty-Studios" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Studio Blanc</span>
+              <span class="tag-chip tag-chip-dark">Beauty</span>
+              <span class="portfolio-service">Foto &amp; Reels</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigene Food-Fotografie von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Nahaufnahme eines liebevoll angerichteten Gerichts" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Löffel &amp; Gabel</span>
+              <span class="tag-chip tag-chip-dark">Food</span>
+              <span class="portfolio-service">Food-Fotografie</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenes Reel-Projekt von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Person filmt einen Reel mit dem Smartphone in einem Café" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Kiez Kaffee</span>
+              <span class="tag-chip tag-chip-dark">Reel</span>
+              <span class="portfolio-service">Kurzvideo</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenen Lifestyle-Content von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade portfolio-item-tall">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=900&auto=format&fit=crop" alt="Lifestyle-Aufnahme einer Person mit Kaffee in urbaner Umgebung" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">Studio Blanc</span>
+              <span class="tag-chip tag-chip-dark">Lifestyle</span>
+              <span class="portfolio-service">Social Media Content</span>
+            </figcaption>
+          </figure>
+
+          <!-- Später durch eigenes Behind-the-Scenes-Bild von tagMe ersetzen -->
+          <figure class="portfolio-item reveal-fade">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Behind-the-Scenes-Aufnahme eines Fotoshootings mit Kamera" loading="lazy">
+            <figcaption class="portfolio-caption">
+              <span class="portfolio-brand">tagMe</span>
+              <span class="tag-chip tag-chip-dark">Behind the Scenes</span>
+              <span class="portfolio-service">Set &amp; Produktion</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEISTUNGEN ============ -->
+    <section class="services" id="leistungen">
+      <div class="section-inner">
+        <p class="eyebrow reveal-fade"><span class="tag-chip">#leistungen</span></p>
+        <h2 class="section-title reveal-fade">Was ich anbiete</h2>
+
+        <div class="services-list">
+          <article class="service-row reveal-fade">
+            <span class="tag-chip tag-chip-outline">#foto</span>
+            <h3 class="service-title">Foto Content</h3>
+            <p class="service-text">Professionelle Fotos für Social Media, Webseiten, Google Business und digitale Kampagnen.</p>
+          </article>
+
+          <article class="service-row reveal-fade">
+            <span class="tag-chip tag-chip-outline">#video</span>
+            <h3 class="service-title">Video &amp; Reels</h3>
+            <p class="service-text">Kurze, moderne Videos und Reels, die Aufmerksamkeit erzeugen und dein Unternehmen authentisch zeigen.</p>
+          </article>
+
+          <article class="service-row reveal-fade">
+            <span class="tag-chip tag-chip-outline">#content</span>
+            <h3 class="service-title">Social Media Content</h3>
+            <p class="service-text">Planung und Erstellung von regelmäßigem Content für Instagram, TikTok und LinkedIn, passend zu deiner Marke und Zielgruppe.</p>
+          </article>
+
+          <article class="service-row reveal-fade">
+            <span class="tag-chip tag-chip-outline">#management</span>
+            <h3 class="service-title">Social Media Management</h3>
+            <p class="service-text">Unterstützung bei Content-Planung, Veröffentlichung und der Weiterentwicklung deines Social-Media-Auftritts.</p>
+          </article>
+
+          <article class="service-row reveal-fade">
+            <span class="tag-chip tag-chip-outline">#community</span>
+            <h3 class="service-title">Community Management</h3>
+            <p class="service-text">Authentische Kommunikation mit deiner Community, Beantwortung von Kommentaren und Nachrichten sowie der Aufbau einer aktiven Online-Community.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREISE ============ -->
+    <section class="pricing" id="preise">
+      <div class="section-inner">
+        <p class="eyebrow reveal-fade"><span class="tag-chip">#preise</span></p>
+        <h2 class="section-title reveal-fade">Pakete &amp; Preise</h2>
+        <p class="section-lead reveal-fade">
+          Klar kalkulierbar statt Kleingedrucktem: drei Pakete, die mit deinem
+          Auftritt mitwachsen. Alle Preise gelten ausschließlich für Instagram —
+          weitere Plattformen sind individuell verhandelbar.
+        </p>
+
+        <div class="pricing-grid">
+
+          <article class="price-card reveal-fade">
+            <span class="tag-chip tag-chip-outline price-badge">Start</span>
+            <h3 class="price-title">Paket 1: Aufbau</h3>
+            <p class="price-amount">599&nbsp;€<span>/Monat · 3 Monate</span></p>
+            <ul class="price-features">
+              <li>Social-Media-Strategie</li>
+              <li>Content-Säulen &amp; Formate definieren</li>
+              <li>Instagram-Profil optimieren</li>
+              <li>Feed aufräumen &amp; Highlight-Cover erstellen</li>
+              <li>4 Beiträge/Reels</li>
+              <li>8 Storys</li>
+              <li>Community Management</li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal-fade">
+            <span class="tag-chip tag-chip-outline price-badge">ab Monat 4</span>
+            <h3 class="price-title">Paket 2: Präsenz</h3>
+            <p class="price-amount">449&nbsp;€<span>/Monat</span></p>
+            <ul class="price-features">
+              <li>Laufende Betreuung</li>
+              <li>4 Beiträge/Reels</li>
+              <li>8 Storys</li>
+              <li>Community Management</li>
+              <li>Reporting</li>
+              <li>Kleinere Optimierungen</li>
+            </ul>
+          </article>
+
+          <article class="price-card price-card-highlight reveal-fade">
+            <span class="tag-chip price-badge">Für mehr Sichtbarkeit</span>
+            <h3 class="price-title">Paket 3: Wachstum</h3>
+            <p class="price-amount">899&nbsp;€<span>/Monat</span></p>
+            <ul class="price-features">
+              <li>Weiterentwicklung der Strategie</li>
+              <li>8 Beiträge/Reels</li>
+              <li>Bis zu 20 Storys</li>
+              <li>Community Management</li>
+              <li>Reporting &amp; Analyse</li>
+              <li>Regelmäßige Optimierung</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="pricing-note reveal-fade">
+          Paket 1 bildet die Grundlage der ersten drei Monate, danach läuft die
+          Betreuung automatisch in Paket 2 weiter. Paket 3 eignet sich, wenn von
+          Anfang an mehr Reichweite gefragt ist. Optional zubuchbar: Animationen &amp;
+          Motion Graphics, Meta Ads, Influencer-Kooperationen, Produkt-/Imagevideos,
+          Logo- &amp; Corporate-Design, Fotoshooting mit Studio-Equipment, Drucksachen,
+          Website-Erstellung — nach Aufwand oder als Festpreis.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ARBEITSPROZESS ============ -->
+    <section class="process" id="prozess">
+      <div class="section-inner">
+        <p class="eyebrow reveal-fade"><span class="tag-chip">#ablauf</span></p>
+        <h2 class="section-title reveal-fade">So arbeiten wir zusammen</h2>
+
+        <ol class="process-list">
+          <li class="process-step reveal-fade">
+            <span class="process-number">01</span>
+            <h3 class="process-title">Kennenlernen</h3>
+            <p class="process-text">Wir sprechen über dein Business, deine Zielgruppe und deine Vorstellungen.</p>
+          </li>
+          <li class="process-step reveal-fade">
+            <span class="process-number">02</span>
+            <h3 class="process-title">Konzept</h3>
+            <p class="process-text">Ich entwickle eine passende Idee und visuelle Richtung für deinen Content.</p>
+          </li>
+          <li class="process-step reveal-fade">
+            <span class="process-number">03</span>
+            <h3 class="process-title">Produktion</h3>
+            <p class="process-text">Wir erstellen professionelle Fotos, Videos und Social-Media-Inhalte.</p>
+          </li>
+          <li class="process-step reveal-fade">
+            <span class="process-number">04</span>
+            <h3 class="process-title">Veröffentlichung</h3>
+            <p class="process-text">Du erhältst fertigen Content oder ich unterstütze dich bei der laufenden Veröffentlichung und Betreuung deiner Community.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ÜBER MICH ============ -->
+    <section class="about" id="ueber-mich">
+      <div class="section-inner about-inner">
+        <div class="about-visual reveal-fade">
+          <img
+            src="assets/alev-portrait.jpg"
+            alt="Alev Ayhan, Gründerin von tagMe, filmt mit einem Gimbal auf einem Branchenevent"
+            loading="lazy"
+            style="object-position: 62% 42%;"
+          >
+          <span class="sticker sticker-about">Gründerin von tagMe</span>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal-fade"><span class="tag-chip">#überMich</span></p>
+          <h2 class="section-title reveal-fade">Hallo, ich heiße Alev.</h2>
+          <p class="about-text reveal-fade">
+            Seit über fünf Jahren arbeite ich im Social-Media-Bereich eines
+            Großkonzerns. Seit einigen Monaten begleite ich zusätzlich Gastronominnen
+            und Gastronomen dabei, ihre Geschichte sichtbar zu machen und einen
+            professionellen Auftritt auf Instagram, TikTok und LinkedIn aufzubauen.
+          </p>
+          <p class="about-text reveal-fade">
+            Von der Strategie bis zur Umsetzung: Ich übernehme Content-Planung,
+            Fotografie, Reels, Grafiken, Texte und Community-Management — für mehr
+            Sichtbarkeit, mehr Gäste und mehr Persönlichkeit.
+          </p>
+          <a href="#kontakt" class="btn btn-outline reveal-fade">Lern mich kennen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALL TO ACTION ============ -->
+    <section class="cta">
+      <div class="section-inner cta-inner">
+        <h2 class="cta-title reveal-fade">Bereit, dein Business sichtbar zu machen?</h2>
+        <p class="cta-text reveal-fade">
+          Erzähl mir von deinem Projekt und lass uns gemeinsam Content entwickeln,
+          den deine Community gerne sieht, teilt und taggt.
+        </p>
+        <a href="#kontakt" class="btn btn-primary btn-large reveal-fade">Projekt anfragen</a>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="contact" id="kontakt">
+      <div class="section-inner contact-inner">
+        <div class="contact-intro">
+          <p class="eyebrow reveal-fade"><span class="tag-chip">#kontakt</span></p>
+          <h2 class="section-title reveal-fade">Lass uns loslegen</h2>
+          <p class="section-lead reveal-fade">
+            Fülle das Formular aus — dein Mail-Programm öffnet sich mit einer
+            vorbereiteten Nachricht an mich.
+          </p>
+
+          <!-- KONTAKTDATEN: Hier später austauschen -->
+          <div class="contact-details reveal-fade">
+            <a href="mailto:alev.ay@outlook.de" class="contact-detail" data-contact="email">
+              <span class="contact-label">E-Mail</span>
+              alev.ay@outlook.de
+            </a>
+            <a href="tel:+49176220225926" class="contact-detail" data-contact="phone">
+              <span class="contact-label">Telefon</span>
+              0176 220225926
+            </a>
+            <!-- Instagram-Handle von tagMe noch ergänzen -->
+            <a href="https://instagram.com/tagme.berlin" class="contact-detail" target="_blank" rel="noopener noreferrer" data-contact="instagram">
+              <span class="contact-label">Instagram</span>
+              @tagme.berlin
+            </a>
+          </div>
+          <!-- ENDE KONTAKTDATEN -->
+        </div>
+
+        <form class="contact-form reveal-fade" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+            <span class="form-error" id="error-name" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="company">Unternehmen</label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-Mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <span class="form-error" id="error-email" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="instagram">Instagram-Name</label>
+            <input type="text" id="instagram" name="instagram" placeholder="@deinunternehmen">
+          </div>
+
+          <div class="form-row">
+            <label for="service">Gewünschte Leistung <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Bitte auswählen</option>
+              <option value="Foto Content">Foto Content</option>
+              <option value="Video & Reels">Video &amp; Reels</option>
+              <option value="Social Media Content">Social Media Content</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="Community Management">Community Management</option>
+              <option value="Mehrere Leistungen">Mehrere Leistungen</option>
+            </select>
+            <span class="form-error" id="error-service" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Projektbeschreibung <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="form-error" id="error-message" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">tag<span class="nav-logo-accent">Me</span></span>
+        <p>Alev Ayhan — Berlin</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://instagram.com/tagme.berlin" target="_blank" rel="noopener noreferrer" data-contact="instagram">Instagram</a>
+        <a href="mailto:alev.ay@outlook.de" data-contact="email">alev.ay@outlook.de</a>
+        <a href="tel:+49176220225926" data-contact="phone">0176 220225926</a>
+      </div>
+
+      <div class="footer-legal">
+        <!-- Rechtliche Inhalte werden später ergänzt -->
+        <a href="#impressum" id="impressumLink">Impressum</a>
+        <a href="#datenschutz" id="datenschutzLink">Datenschutz</a>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year"></span> tagMe · Alev Ayhan · Berlin</p>
+  </footer>
+
+  <!-- ============ IMPRESSUM / DATENSCHUTZ PLATZHALTER ============ -->
+  <div class="legal-modal" id="legalModal" hidden>
+    <div class="legal-modal-content" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+      <button class="legal-modal-close" id="legalModalClose" aria-label="Schließen">✕</button>
+      <h2 id="legalModalTitle">Impressum</h2>
+      <p>
+        <!-- TODO: Rechtstext ergänzen (Anbieterkennzeichnung nach § 5 TMG) -->
+        Hier folgt in Kürze das vollständige Impressum mit Name, Anschrift und
+        Kontaktdaten der verantwortlichen Person.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ ZURÜCK NACH OBEN ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
