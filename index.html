@@ -24,6 +24,7 @@
       <a href="#top" class="nav-logo" aria-label="tagMe Startseite">tag<span class="nav-logo-accent">Me</span></a>
 
       <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
+        <a href="#top" class="nav-link nav-link-home">Start</a>
         <a href="#arbeiten" class="nav-link">Arbeiten</a>
         <a href="#leistungen" class="nav-link">Leistungen</a>
         <a href="#preise" class="nav-link">Preise</a>
@@ -40,28 +41,40 @@
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <div class="hero-bg">
-        <img
-          src="images/hero-cafe-interior.jpg"
-          alt="Stilvoll beleuchtetes Berliner Café mit Kronleuchter und grünen Samtbänken"
-          loading="eager"
-        >
-      </div>
-
+    <section class="hero" id="top" data-page="top">
       <div class="hero-inner">
-        <p class="hero-eyebrow reveal-fade">Content Studio · Berlin</p>
-        <h1 class="hero-title reveal-fade">
-          Content, den man <em>gerne</em> taggt.
-        </h1>
-        <p class="hero-text reveal-fade">
-          tagMe erstellt authentische Fotos, Videos und Social-Media-Content für
-          Cafés, Restaurants, Hotels, Beauty-Brands und lokale Unternehmen —
-          mit echtem Blick für das, was deinen Ort besonders macht.
-        </p>
-        <div class="hero-actions reveal-fade">
-          <a href="#arbeiten" class="btn btn-primary">Arbeiten ansehen</a>
-          <a href="#kontakt" class="btn btn-outline">Projekt anfragen</a>
+        <div class="hero-copy">
+          <p class="hero-eyebrow reveal-fade">Content Studio · Berlin</p>
+          <h1 class="hero-title reveal-fade">
+            Content, den man <em>gerne</em> taggt.
+          </h1>
+          <p class="hero-text reveal-fade">
+            tagMe erstellt authentische Fotos, Videos und Social-Media-Content für
+            Cafés, Restaurants, Hotels, Beauty-Brands und lokale Unternehmen —
+            mit echtem Blick für das, was deinen Ort besonders macht.
+          </p>
+          <div class="hero-actions reveal-fade">
+            <a href="#arbeiten" class="btn btn-primary">Arbeiten ansehen</a>
+            <a href="#kontakt" class="btn btn-outline">Projekt anfragen</a>
+          </div>
+        </div>
+
+        <div class="hero-collage" id="heroCollage">
+          <div class="collage-card collage-card-1 reveal-fade">
+            <img src="images/portfolio-storefront.jpg" alt="Café-Fassade von Coffee Cult in Berlin">
+          </div>
+          <div class="collage-card collage-card-2 reveal-fade">
+            <img src="images/service-social.jpg" alt="Fertig gestaltete Instagram-Story mit Cappuccino">
+          </div>
+          <div class="collage-card collage-card-3 reveal-fade">
+            <img src="images/portfolio-milk-pour.jpg" alt="Barista gießt Milchschaum in eine Kaffeetasse">
+          </div>
+          <div class="collage-card collage-card-4 reveal-fade">
+            <img src="images/portfolio-outdoor-tables.jpg" alt="Marmortische mit Blumen vor einem Berliner Café">
+          </div>
+          <div class="collage-card collage-card-5 reveal-fade">
+            <img src="images/about-alev.jpg" alt="Alev Ayhan filmt mit einem Gimbal" style="object-position: 62% 30%;">
+          </div>
         </div>
       </div>
 
@@ -72,9 +85,14 @@
     </section>
 
     <!-- ============ BRANCHEN MARQUEE ============ -->
-    <section class="industries" aria-label="Branchen, für die tagMe arbeitet">
-      <div class="marquee">
-        <div class="marquee-track" id="marqueeTrack">
+    <section class="industries" aria-label="Branchen, für die tagMe arbeitet" data-page="top">
+      <!-- Der Inhalt ist absichtlich 8x wiederholt: eine einzelne Spur muss
+           breiter sein als der breiteste denkbare Bildschirm, sonst entsteht
+           beim Loopen eine sichtbare Lücke, sobald sie nicht mehr nachkommt.
+           aria-hidden auf .marquee, da es rein dekorativ ist (Zusammenfassung
+           steht bereits im aria-label der Section). -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
           <span>Cafés</span>
           <span class="dot" aria-hidden="true">·</span>
           <span>Restaurants</span>
@@ -87,7 +105,78 @@
           <span class="dot" aria-hidden="true">·</span>
           <span>Lokale Unternehmen</span>
           <span class="dot" aria-hidden="true">·</span>
-          <!-- Duplikat für nahtlose Laufschrift -->
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Cafés</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Restaurants</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Hotels</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Beauty</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lifestyle</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>Lokale Unternehmen</span>
+          <span class="dot" aria-hidden="true">·</span>
           <span>Cafés</span>
           <span class="dot" aria-hidden="true">·</span>
           <span>Restaurants</span>
@@ -105,7 +194,7 @@
     </section>
 
     <!-- ============ PORTFOLIO / ARBEITEN ============ -->
-    <section class="portfolio" id="arbeiten">
+    <section class="portfolio" id="arbeiten" data-page="arbeiten">
       <div class="section-inner">
         <p class="eyebrow reveal-fade">Arbeiten</p>
         <h2 class="section-title reveal-fade">Ausgewählte Projekte</h2>
@@ -116,7 +205,7 @@
 
         <div class="portfolio-grid">
 
-          <figure class="portfolio-item reveal-fade portfolio-item-tall">
+          <figure class="portfolio-item reveal-fade">
             <img src="images/portfolio-storefront.jpg" alt="Café-Fassade mit grüner Markise in Berlin" loading="lazy">
             <figcaption class="portfolio-caption">
               <span class="portfolio-brand">Coffee Cult</span>
@@ -140,7 +229,7 @@
             </figcaption>
           </figure>
 
-          <figure class="portfolio-item reveal-fade portfolio-item-tall">
+          <figure class="portfolio-item reveal-fade">
             <img src="images/portfolio-outdoor-tables.jpg" alt="Marmortische mit Blumen vor einem Berliner Café" loading="lazy">
             <figcaption class="portfolio-caption">
               <span class="portfolio-brand">Coffee Cult</span>
@@ -177,7 +266,7 @@
     </section>
 
     <!-- ============ LEISTUNGEN ============ -->
-    <section class="services" id="leistungen">
+    <section class="services" id="leistungen" data-page="leistungen">
       <div class="section-inner">
         <p class="eyebrow reveal-fade">Leistungen</p>
         <h2 class="section-title reveal-fade">Was ich anbiete</h2>
@@ -234,7 +323,7 @@
     </section>
 
     <!-- ============ PREISE ============ -->
-    <section class="pricing" id="preise">
+    <section class="pricing" id="preise" data-page="preise">
       <div class="section-inner">
         <p class="eyebrow reveal-fade">Preise</p>
         <h2 class="section-title reveal-fade">Pakete &amp; Preise</h2>
@@ -291,6 +380,12 @@
 
         </div>
 
+        <div class="pricing-dots" id="pricingDots">
+          <span class="pricing-dot is-active" data-index="0" role="button" tabindex="0" aria-label="Paket 1 anzeigen"></span>
+          <span class="pricing-dot" data-index="1" role="button" tabindex="0" aria-label="Paket 2 anzeigen"></span>
+          <span class="pricing-dot" data-index="2" role="button" tabindex="0" aria-label="Paket 3 anzeigen"></span>
+        </div>
+
         <p class="pricing-note reveal-fade">
           Paket 1 bildet die Grundlage der ersten drei Monate, danach läuft die
           Betreuung automatisch in Paket 2 weiter. Paket 3 eignet sich, wenn von
@@ -303,7 +398,7 @@
     </section>
 
     <!-- ============ ARBEITSPROZESS ============ -->
-    <section class="process" id="prozess">
+    <section class="process" id="prozess" data-page="leistungen">
       <div class="section-inner">
         <p class="eyebrow reveal-fade">Ablauf</p>
         <h2 class="section-title reveal-fade">So arbeiten wir zusammen</h2>
@@ -334,7 +429,7 @@
     </section>
 
     <!-- ============ ÜBER MICH ============ -->
-    <section class="about" id="ueber-mich">
+    <section class="about" id="ueber-mich" data-page="ueber-mich">
       <div class="section-inner about-inner">
         <div class="about-visual reveal-fade">
           <img
@@ -365,7 +460,7 @@
     </section>
 
     <!-- ============ CALL TO ACTION ============ -->
-    <section class="cta">
+    <section class="cta" data-page="kontakt">
       <div class="section-inner cta-inner">
         <h2 class="cta-title reveal-fade">Bereit, dein Business sichtbar zu machen?</h2>
         <p class="cta-text reveal-fade">
@@ -377,7 +472,7 @@
     </section>
 
     <!-- ============ KONTAKT ============ -->
-    <section class="contact" id="kontakt">
+    <section class="contact" id="kontakt" data-page="kontakt">
       <div class="section-inner contact-inner">
         <div class="contact-intro">
           <p class="eyebrow reveal-fade">Kontakt</p>
@@ -393,17 +488,23 @@
               <span class="contact-label">E-Mail</span>
               alev.ay@outlook.de
             </a>
-            <a href="tel:+49176220225926" class="contact-detail" data-contact="phone">
+            <a href="tel:+4917622025926" class="contact-detail" data-contact="phone">
               <span class="contact-label">Telefon</span>
-              0176 220225926
-            </a>
-            <!-- Instagram-Handle von tagMe noch ergänzen -->
-            <a href="https://instagram.com/tagme.berlin" class="contact-detail" target="_blank" rel="noopener noreferrer" data-contact="instagram">
-              <span class="contact-label">Instagram</span>
-              @tagme.berlin
+              0176 22025926
             </a>
           </div>
           <!-- ENDE KONTAKTDATEN -->
+
+          <a
+            href="https://wa.me/4917622025926?text=Hallo%20Alev%2C%20ich%20interessiere%20mich%20f%C3%BCr%20tagMe%20und%20h%C3%A4tte%20gerne%20mehr%20Infos!"
+            class="btn btn-whatsapp reveal-fade"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-contact="whatsapp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.51.15-.17.2-.3.29-.49.1-.2.05-.37-.02-.51-.08-.15-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.2 0-.51.07-.78.37-.26.3-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.06 3.14 4.99 4.4.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.09 1.7-.7 1.94-1.36.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34z"></path><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.87.5 3.63 1.44 5.15L2 22l4.98-1.4A9.96 9.96 0 0 0 12.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm0 18.1a8.1 8.1 0 0 1-4.14-1.14l-.3-.18-3 .84.8-2.94-.2-.3A8.07 8.07 0 0 1 3.9 12c0-4.48 3.65-8.1 8.12-8.1 4.47 0 8.1 3.62 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1z"></path></svg>
+            Direkt per WhatsApp schreiben
+          </a>
         </div>
 
         <form class="contact-form reveal-fade" id="contactForm" novalidate>
@@ -466,9 +567,8 @@
       </div>
 
       <div class="footer-links">
-        <a href="https://instagram.com/tagme.berlin" target="_blank" rel="noopener noreferrer" data-contact="instagram">Instagram</a>
         <a href="mailto:alev.ay@outlook.de" data-contact="email">alev.ay@outlook.de</a>
-        <a href="tel:+49176220225926" data-contact="phone">0176 220225926</a>
+        <a href="tel:+4917622025926" data-contact="phone">0176 22025926</a>
       </div>
 
       <div class="footer-legal">

@@ -23,11 +23,11 @@
   --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Inter", Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
-  --max-width: 1240px;
-  --gutter: clamp(1.25rem, 4vw, 3rem);
-  --radius-s: 10px;
-  --radius-m: 20px;
-  --radius-l: 28px;
+  --max-width: 1160px;
+  --gutter: clamp(1.1rem, 3.4vw, 2.4rem);
+  --radius-s: 9px;
+  --radius-m: 16px;
+  --radius-l: 20px;
   --radius-pill: 980px;
 
   /* Bewegung: sanfte, "spring-artige" Kurve statt harter Ease-Kurven */
@@ -54,7 +54,7 @@ body {
   background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5;
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
@@ -118,33 +118,33 @@ select:focus-visible {
 .section-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: clamp(4rem, 9vw, 8rem) var(--gutter);
+  padding: clamp(2.75rem, 6vw, 5.5rem) var(--gutter);
 }
 
 .eyebrow {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 590;
   color: var(--color-accent);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
   letter-spacing: 0.01em;
 }
 
 .section-title {
   font-weight: 600;
-  font-size: clamp(2rem, 4.2vw, 3.4rem);
-  line-height: 1.07;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   max-width: 18ch;
   color: var(--color-ink);
 }
 
 .section-lead {
   color: var(--color-ink-soft);
-  font-size: 1.15rem;
+  font-size: 0.98rem;
   line-height: 1.55;
   max-width: 46ch;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.005em;
 }
 
@@ -173,10 +173,10 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.85rem 1.7rem;
+  padding: 0.65rem 1.35rem;
   border-radius: var(--radius-pill);
   font-weight: 590;
-  font-size: 0.98rem;
+  font-size: 0.88rem;
   letter-spacing: -0.005em;
   transition: transform 120ms var(--ease-press), background var(--dur-s) var(--ease), color var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease), opacity var(--dur-s) var(--ease);
 }
@@ -226,8 +226,8 @@ select:focus-visible {
 }
 
 .btn-large {
-  padding: 1rem 2.2rem;
-  font-size: 1.05rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
 }
 
 .btn-full {
@@ -272,7 +272,7 @@ select:focus-visible {
   left: 0;
   right: 0;
   z-index: 500;
-  padding: 1.1rem 0;
+  padding: 0.9rem 0;
   transition: background var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease), padding var(--dur-s) var(--ease), backdrop-filter var(--dur-s) var(--ease);
 }
 
@@ -281,7 +281,7 @@ select:focus-visible {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow: 0 1px 0 var(--color-border);
-  padding: 0.75rem 0;
+  padding: 0.6rem 0;
 }
 
 .nav-inner {
@@ -295,7 +295,7 @@ select:focus-visible {
 
 .nav-logo {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   letter-spacing: -0.02em;
 }
 
@@ -306,11 +306,11 @@ select:focus-visible {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.1rem;
+  gap: 1.6rem;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--color-ink-soft);
   position: relative;
@@ -323,10 +323,14 @@ select:focus-visible {
   color: var(--color-ink);
 }
 
+.nav-link-home {
+  display: none;
+}
+
 .nav-link-cta {
   background: var(--color-ink);
   color: var(--color-white);
-  padding: 0.5rem 1.15rem;
+  padding: 0.4rem 0.95rem;
   border-radius: var(--radius-pill);
   transition: transform 120ms var(--ease-press), background var(--dur-s) var(--ease);
 }
@@ -368,107 +372,76 @@ select:focus-visible {
 /* ---------- 7. Hero ---------- */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  color: var(--color-white);
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-}
-
-.hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 9, 8, 0.55) 0%, rgba(10, 9, 8, 0.35) 45%, rgba(10, 9, 8, 0.72) 100%);
+  background: radial-gradient(120% 100% at 85% 0%, var(--color-accent-soft) 0%, var(--color-bg) 45%), var(--color-bg);
 }
 
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: clamp(6rem, 12vw, 8rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+  padding: clamp(5.5rem, 10vw, 7rem) var(--gutter) clamp(3rem, 6vw, 4.5rem);
   width: 100%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
 }
 
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.92rem;
+  font-size: 0.8rem;
   font-weight: 590;
-  padding: 0.4rem 0.95rem;
+  color: var(--color-accent);
+  padding: 0.32rem 0.8rem;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  margin-bottom: 1.75rem;
+  background: var(--color-accent-soft);
+  margin-bottom: 1.25rem;
 }
 
 .hero-title {
   font-weight: 600;
-  font-size: clamp(2.6rem, 7vw, 5.4rem);
-  line-height: 1.04;
+  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+  line-height: 1.08;
   letter-spacing: -0.03em;
-  margin: 0 auto 1.5rem;
-  max-width: 16ch;
+  margin-bottom: 1.1rem;
+  max-width: 14ch;
+  color: var(--color-ink);
 }
 
 .hero-title em {
   font-style: normal;
-  color: #f0b98f;
+  color: var(--color-accent);
 }
 
 .hero-text {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 46ch;
-  margin: 0 auto 2.5rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  max-width: 42ch;
+  margin-bottom: 1.8rem;
   letter-spacing: -0.005em;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero .btn-outline {
-  border-color: rgba(255, 255, 255, 0.5);
-  color: var(--color-white);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.hero .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.18);
 }
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-ink-faint);
   font-size: 0.75rem;
   letter-spacing: 0.06em;
 }
@@ -476,7 +449,7 @@ select:focus-visible {
 .scroll-indicator-line {
   width: 1px;
   height: 30px;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--color-border-strong);
   position: relative;
   overflow: hidden;
 }
@@ -488,7 +461,7 @@ select:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--color-white);
+  background: var(--color-ink);
   animation: scrollLine 1.8s ease-in-out infinite;
 }
 
@@ -496,6 +469,113 @@ select:focus-visible {
   0% { top: -100%; }
   50% { top: 0%; }
   100% { top: 100%; }
+}
+
+/* ---------- 7b. Hero-Collage ---------- */
+.hero-collage {
+  position: relative;
+  aspect-ratio: 1 / 1.02;
+  max-width: 400px;
+  margin-left: auto;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.collage-card {
+  position: absolute;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -20px rgba(29, 25, 20, 0.28);
+  background: var(--color-bg-alt);
+  transform: translateY(28px) scale(0.94) rotate(var(--tilt, 0deg));
+  opacity: 0;
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  will-change: transform;
+}
+
+.collage-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(var(--tilt, 0deg));
+}
+
+.collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.12);
+  animation: cardDrift var(--drift-dur, 14s) var(--drift-delay, 0s) ease-in-out infinite;
+}
+
+/* Start und Ende sind identisch (0% = 100%), dadurch läuft die
+   Bewegung endlos im Kreis, statt an den Umkehrpunkten sichtbar
+   abzubremsen und zu pausieren. */
+@keyframes cardDrift {
+  0%   { transform: scale(1.12) translate3d(0, -2.5%, 0); }
+  50%  { transform: scale(1.12) translate3d(0, 2.5%, 0); }
+  100% { transform: scale(1.12) translate3d(0, -2.5%, 0); }
+}
+
+.collage-card-1 {
+  width: 60%;
+  height: 68%;
+  top: 0;
+  left: 0;
+  --tilt: -2deg;
+  z-index: 1;
+  transition-delay: 0.05s;
+}
+
+.collage-card-2 {
+  width: 40%;
+  height: 44%;
+  top: -4%;
+  right: 0;
+  --tilt: 3deg;
+  z-index: 2;
+  transition-delay: 0.18s;
+}
+.collage-card-2 img { --drift-dur: 11s; --drift-delay: -2s; }
+
+.collage-card-3 {
+  width: 38%;
+  height: 36%;
+  bottom: -3%;
+  left: 4%;
+  --tilt: -4deg;
+  z-index: 3;
+  transition-delay: 0.31s;
+  border: 5px solid var(--color-bg);
+}
+.collage-card-3 img { --drift-dur: 8s; --drift-delay: -4s; }
+
+.collage-card-4 {
+  width: 44%;
+  height: 46%;
+  bottom: 0;
+  right: 3%;
+  --tilt: 2deg;
+  z-index: 2;
+  transition-delay: 0.44s;
+}
+.collage-card-4 img { --drift-dur: 10s; --drift-delay: -1s; }
+
+.collage-card-5 {
+  width: 30%;
+  height: 30%;
+  top: 42%;
+  right: -6%;
+  --tilt: -3deg;
+  z-index: 4;
+  border: 5px solid var(--color-bg);
+  transition-delay: 0.55s;
+}
+.collage-card-5 img { --drift-dur: 12s; --drift-delay: -6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .collage-card img {
+    animation: none;
+    transform: scale(1.02);
+  }
 }
 
 /* ---------- 8. Branchen-Leiste ---------- */
@@ -515,44 +595,61 @@ select:focus-visible {
 .marquee-track {
   display: flex;
   width: max-content;
+  align-items: center;
   gap: 2.5rem;
   font-size: clamp(0.95rem, 1.6vw, 1.15rem);
   font-weight: 590;
   color: var(--color-ink-faint);
   white-space: nowrap;
-  animation: marquee 32s linear infinite;
+  animation: marquee 48s linear infinite;
 }
 
 .marquee-track .dot {
   color: var(--color-border-strong);
 }
 
+/* Der Inhalt besteht aus 8 identischen Wiederholungen (siehe HTML).
+   Die Spur wandert um genau 1/8 ihrer Gesamtbreite — exakt eine
+   Wiederholung — und die restlichen 7 sehen dabei identisch aus wie
+   der Ausgangszustand. Dadurch bleibt der sichtbare Bereich immer
+   lückenlos gefüllt, auch auf sehr breiten Bildschirmen, und der
+   Übergang ist unsichtbar. */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(calc(-100% / 8)); }
 }
 
-/* ---------- 9. Portfolio ---------- */
+/* ---------- 9. Portfolio: 2-spaltiges Raster, untereinander ---------- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 260px;
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(200px, 240px);
+  gap: 0.85rem;
 }
 
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-m);
-  grid-column: span 2;
-  grid-row: span 1;
   background: var(--color-bg-alt);
   box-shadow: 0 1px 0 var(--color-border);
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
 }
 
-.portfolio-item-tall {
-  grid-row: span 2;
+.portfolio-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
+
+.portfolio-item:nth-child(1) { transition-delay: 0.02s; }
+.portfolio-item:nth-child(2) { transition-delay: 0.08s; }
+.portfolio-item:nth-child(3) { transition-delay: 0.14s; }
+.portfolio-item:nth-child(4) { transition-delay: 0.2s; }
+.portfolio-item:nth-child(5) { transition-delay: 0.26s; }
+.portfolio-item:nth-child(6) { transition-delay: 0.32s; }
+.portfolio-item:nth-child(7) { transition-delay: 0.38s; }
 
 .portfolio-item img {
   width: 100%;
@@ -572,7 +669,7 @@ select:focus-visible {
   align-items: baseline;
   gap: 0.6rem;
   flex-wrap: wrap;
-  padding: 1.1rem 1.25rem;
+  padding: 0.85rem 0.95rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.68), transparent);
   color: var(--color-white);
   transform: translateY(8px);
@@ -588,12 +685,12 @@ select:focus-visible {
 
 .portfolio-brand {
   font-weight: 600;
-  font-size: 1.02rem;
+  font-size: 0.92rem;
   letter-spacing: -0.01em;
 }
 
 .portfolio-service {
-  font-size: 0.85rem;
+  font-size: 0.76rem;
   opacity: 0.85;
 }
 
@@ -605,9 +702,9 @@ select:focus-visible {
 .service-feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
-  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  padding: clamp(1.75rem, 3.5vw, 3rem) 0;
 }
 
 .service-feature + .service-feature {
@@ -633,48 +730,82 @@ select:focus-visible {
 
 .service-tag {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 590;
   color: var(--color-accent);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .service-title {
   font-weight: 600;
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
   letter-spacing: -0.02em;
-  margin-bottom: 0.85rem;
-  line-height: 1.15;
+  margin-bottom: 0.65rem;
+  line-height: 1.18;
 }
 
 .service-text {
   color: var(--color-ink-soft);
-  font-size: 1.08rem;
+  font-size: 0.96rem;
   line-height: 1.55;
   max-width: 42ch;
 }
 
-/* ---------- 10b. Preise ---------- */
+/* ---------- 10b. Preise: horizontale Swipe-Cards ---------- */
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 1rem;
+  display: flex;
+  gap: 1.1rem;
+  margin: 0.75rem calc(var(--gutter) * -1) 0;
+  padding: 0.25rem var(--gutter) 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--gutter);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pricing-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .price-card {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-l);
-  padding: 2.25rem 1.9rem;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
+  flex: 1 1 280px;
+  max-width: 340px;
+  min-width: 250px;
+  scroll-snap-align: center;
   transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
 }
 
 .price-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.18);
+}
+
+.pricing-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.pricing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+  transition: background var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
+  cursor: pointer;
+}
+
+.pricing-dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.25);
 }
 
 .price-card-highlight {
@@ -701,16 +832,16 @@ select:focus-visible {
 
 .price-title {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .price-amount {
   font-weight: 600;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   color: var(--color-ink);
 }
 
@@ -774,8 +905,8 @@ select:focus-visible {
 .process-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .process-step {
@@ -796,22 +927,22 @@ select:focus-visible {
 .process-number {
   display: block;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--color-ink-faint);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
   letter-spacing: -0.01em;
 }
 
 .process-title {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   letter-spacing: -0.01em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .process-text {
   color: var(--color-ink-soft);
-  font-size: 0.98rem;
+  font-size: 0.88rem;
   line-height: 1.5;
 }
 
@@ -843,10 +974,10 @@ select:focus-visible {
 
 .about-text {
   color: var(--color-ink-soft);
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   line-height: 1.6;
   max-width: 52ch;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .about-copy .btn {
@@ -868,17 +999,17 @@ select:focus-visible {
 
 .cta-title {
   font-weight: 600;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.6rem);
   letter-spacing: -0.02em;
   max-width: 20ch;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .cta-text {
   color: rgba(255, 255, 255, 0.68);
   max-width: 46ch;
-  margin-bottom: 2.25rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.98rem;
 }
 
 .cta .btn-primary {
@@ -900,18 +1031,18 @@ select:focus-visible {
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  margin-top: 2rem;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
 }
 
 .contact-detail {
   display: flex;
   flex-direction: column;
-  font-size: 1.15rem;
+  font-size: 1.02rem;
   font-weight: 590;
   letter-spacing: -0.01em;
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.85rem;
+  padding-bottom: 0.7rem;
   transition: color var(--dur-s) var(--ease);
 }
 
@@ -928,10 +1059,28 @@ select:focus-visible {
   margin-bottom: 0.3rem;
 }
 
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.btn-whatsapp svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp:hover {
+  background: #1fbd5a;
+  box-shadow: 0 8px 20px -8px rgba(37, 211, 102, 0.55);
+}
+
 .contact-form {
   background: var(--color-bg-alt);
   border-radius: var(--radius-l);
-  padding: clamp(1.75rem, 3vw, 2.75rem);
+  padding: clamp(1.4rem, 2.5vw, 2.1rem);
 }
 
 .form-row {
@@ -1001,7 +1150,7 @@ select:focus-visible {
 
 .footer-logo {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--color-ink);
   letter-spacing: -0.02em;
 }
@@ -1153,6 +1302,17 @@ select:focus-visible {
 
 /* ---------- 20. Responsive ---------- */
 @media (max-width: 1000px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-collage {
+    order: -1;
+    max-width: 440px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.9;
+  }
+
   .about-inner,
   .contact-inner {
     grid-template-columns: 1fr;
@@ -1160,10 +1320,6 @@ select:focus-visible {
 
   .process-list {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
   }
 
   .service-feature,
@@ -1204,28 +1360,61 @@ select:focus-visible {
     display: flex;
   }
 
+  .nav-link-home {
+    display: block;
+  }
+
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 210px;
+    grid-auto-rows: minmax(150px, 190px);
+    gap: 0.65rem;
   }
 
   .process-list {
     grid-template-columns: 1fr;
   }
+
+  /* Sections, die sich auf einer mobilen "Seite" eine Section-Gruppe
+     teilen (Leistungen+Prozess, CTA+Kontakt), brauchen keinen vollen
+     Abstand oben — sonst wirkt es wie zwei getrennte Seiten. */
+  .process .section-inner,
+  .contact .section-inner {
+    padding-top: 1.5rem;
+  }
+
+  /* -----------------------------------------------------------
+     Mobile: einzelne "Seiten" statt einer langen Scrollseite.
+     JS schaltet .page-active je nach Menüauswahl um.
+  ----------------------------------------------------------- */
+  main > section[data-page] {
+    display: none;
+  }
+
+  main > section[data-page].page-active {
+    display: block;
+    animation: pageIn 0.4s var(--ease);
+  }
+
+  /* Höhere Spezifität nötig, damit .hero sein display:flex behält.
+     align-items:flex-start statt center, sonst wird gestapelter Inhalt
+     (Collage + Text), der höher als der Viewport ist, oben/unten
+     abgeschnitten statt zu scrollen. */
+  main > section[data-page].page-active.hero {
+    display: flex;
+    align-items: flex-start;
+    min-height: calc(100vh - 64px);
+  }
+
+  .hero-title {
+    max-width: none;
+  }
+
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @media (max-width: 520px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-item,
-  .portfolio-item-tall {
-    grid-column: span 1;
-    grid-row: span 1;
-    height: 320px;
-  }
-
   .hero {
     min-height: 100vh;
   }

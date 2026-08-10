@@ -52,12 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Menü schließen, sobald ein Link angeklickt wird
-  navLinkItems.forEach(link => link.addEventListener('click', closeMobileNav));
-
-  // Aktiven Navigationspunkt beim Scrollen markieren
+  // Aktiven Navigationspunkt beim Scrollen markieren (nur Desktop-Einzelseite,
+  // im mobilen Seitenmodus übernimmt setActivePage() das Markieren)
   const sections = document.querySelectorAll('main section[id]');
+  const pagedMedia = window.matchMedia('(max-width: 780px)');
+
   const highlightActiveNav = () => {
+    if (pagedMedia.matches) return;
+
     let currentId = '';
     const scrollPos = window.scrollY + 140;
 
@@ -74,6 +76,56 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', highlightActiveNav, { passive: true });
   highlightActiveNav();
+
+  /* -----------------------------------------------------------
+     2b. Mobile Seitenmodus: statt einer langen Scrollseite zeigt
+     das Menü auf schmalen Bildschirmen jeweils nur eine "Seite"
+     (Gruppe von Sections mit gleichem data-page-Attribut).
+     Auf breiten Bildschirmen bleibt es die gewohnte Scroll-Seite.
+  ----------------------------------------------------------- */
+  const pageGroups = document.querySelectorAll('main > section[data-page]');
+  const knownPageIds = new Set(Array.from(pageGroups, el => el.dataset.page));
+
+  const setActivePage = (pageId, { scroll = true } = {}) => {
+    if (!knownPageIds.has(pageId)) return;
+
+    pageGroups.forEach(section => {
+      section.classList.toggle('page-active', section.dataset.page === pageId);
+    });
+
+    navLinkItems.forEach(link => {
+      const targetId = link.getAttribute('href')?.replace('#', '');
+      link.classList.toggle('nav-active', targetId === pageId);
+    });
+
+    if (!scroll) return;
+
+    if (pagedMedia.matches) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    } else {
+      document.getElementById(pageId)?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    }
+  };
+
+  // Sprungziel beim Laden aus dem Hash übernehmen (Startseite als Fallback)
+  const initialPageId = knownPageIds.has(location.hash.replace('#', ''))
+    ? location.hash.replace('#', '')
+    : 'top';
+  setActivePage(initialPageId, { scroll: false });
+
+  // Alle internen Anker (Nav, Hero-Buttons, "Lern mich kennen" …) abfangen:
+  // Im mobilen Seitenmodus schalten sie die Seite um statt zu scrollen.
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const targetId = link.getAttribute('href')?.replace('#', '');
+    if (!knownPageIds.has(targetId)) return;
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      history.replaceState(null, '', `#${targetId}`);
+      setActivePage(targetId);
+      closeMobileNav();
+    });
+  });
 
   /* -----------------------------------------------------------
      3. Scroll-Animationen mit IntersectionObserver
@@ -100,6 +152,64 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal-fade').forEach(el => {
       el.classList.add('is-visible');
     });
+  }
+
+  /* -----------------------------------------------------------
+     3b. Preis-Karten: Swipe-Dots mit der Scrollposition abgleichen
+  ----------------------------------------------------------- */
+  const pricingGrid = document.querySelector('.pricing-grid');
+  const pricingDots = document.querySelectorAll('.pricing-dot');
+
+  if (pricingGrid && pricingDots.length) {
+    const priceCards = pricingGrid.querySelectorAll('.price-card');
+
+    const scrollToCard = (index) => {
+      priceCards[index]?.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      });
+    };
+
+    pricingDots.forEach(dot => {
+      const goTo = () => scrollToCard(Number(dot.dataset.index));
+      dot.addEventListener('click', goTo);
+      dot.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          goTo();
+        }
+      });
+    });
+
+    const syncPricingDots = () => {
+      const gridCenter = pricingGrid.getBoundingClientRect().left + pricingGrid.clientWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      priceCards.forEach((card, index) => {
+        const cardCenter = card.getBoundingClientRect().left + card.clientWidth / 2;
+        const distance = Math.abs(cardCenter - gridCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      pricingDots.forEach((dot, index) => {
+        dot.classList.toggle('is-active', index === closestIndex);
+      });
+    };
+
+    let pricingScrollTicking = false;
+    pricingGrid.addEventListener('scroll', () => {
+      if (pricingScrollTicking) return;
+      pricingScrollTicking = true;
+      window.requestAnimationFrame(() => {
+        syncPricingDots();
+        pricingScrollTicking = false;
+      });
+    }, { passive: true });
   }
 
   /* -----------------------------------------------------------
