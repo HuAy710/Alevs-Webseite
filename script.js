@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Respektiert prefers-reduced-motion (siehe CSS und Check oben).
   ----------------------------------------------------------- */
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const revealTargets = document.querySelectorAll('.reveal-fade, .hero-title');
+    const revealTargets = document.querySelectorAll('.reveal-fade');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -97,24 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach(target => revealObserver.observe(target));
   } else {
     // Ohne Animation: alles sofort sichtbar machen
-    document.querySelectorAll('.reveal-fade, .hero-title').forEach(el => {
+    document.querySelectorAll('.reveal-fade').forEach(el => {
       el.classList.add('is-visible');
     });
   }
 
   /* -----------------------------------------------------------
-     4. Dezenter Parallax-Effekt für das Hero-Bild
-  ----------------------------------------------------------- */
-  const heroImgMain = document.querySelector('.hero-img-main');
-  if (heroImgMain && !prefersReducedMotion) {
-    window.addEventListener('scroll', () => {
-      const offset = window.scrollY * 0.08;
-      heroImgMain.style.transform = `translateY(${offset}px)`;
-    }, { passive: true });
-  }
-
-  /* -----------------------------------------------------------
-     5. "Zurück nach oben"-Button
+     4. "Zurück nach oben"-Button
   ----------------------------------------------------------- */
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
