@@ -81,6 +81,8 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 input, textarea, select {
@@ -365,15 +367,29 @@ select:focus-visible {
 .nav-burger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   width: 26px;
+  position: relative;
   z-index: 501;
+  /* Safari (v. a. iOS) hat einen bekannten Compositing-Bug: Inhalte, die
+     nur per z-index über einem backdrop-filter (siehe .nav::before)
+     liegen, werden manchmal nicht gezeichnet — bleiben aber klickbar.
+     isolation+translateZ zwingt den Burger auf eine eigene GPU-Ebene,
+     damit er zuverlässig über dem Blur gerendert wird. */
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .nav-burger span {
+  display: block;
+  width: 100%;
   height: 2px;
+  flex: 0 0 auto;
   background: var(--color-ink);
   border-radius: 2px;
+  pointer-events: none;
   transition: transform var(--dur-s) var(--ease), opacity var(--dur-s) var(--ease);
 }
 

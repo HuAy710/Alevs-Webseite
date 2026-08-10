@@ -52,6 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Menü schließen, wenn außerhalb davon geklickt/getippt wird
+  document.addEventListener('click', (event) => {
+    if (!navLinks.classList.contains('nav-open')) return;
+    if (navLinks.contains(event.target) || navBurger.contains(event.target)) return;
+    closeMobileNav();
+  });
+
   // Aktiven Navigationspunkt beim Scrollen markieren (nur Desktop-Einzelseite,
   // im mobilen Seitenmodus übernimmt setActivePage() das Markieren)
   const sections = document.querySelectorAll('main section[id]');
