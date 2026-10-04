@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namensvergleich</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cmp { max-width: 1100px; margin: 0 auto; padding: 4rem var(--gutter); }
+    .cmp h1 { font-size: 1rem; font-weight: 500; color: var(--color-ink-soft); margin-bottom: 2.5rem; }
+    .cmp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .cmp-box { border-radius: var(--radius-m); padding: 2.5rem 2rem; min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+    .cmp-light { background: var(--color-white); border: 1px solid var(--color-border-strong); }
+    .cmp-dark { background: var(--color-ink); color: var(--color-white); }
+    .cmp-name { font-weight: 500; font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.05; letter-spacing: -0.04em; }
+    .cmp-name em { font-weight: 400; }
+    .cmp-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.9rem; }
+    .cmp-nav .logo { font-weight: 600; font-size: 1.3rem; letter-spacing: -0.03em; }
+    .cmp-label { font-size: 0.85rem; color: var(--color-ink-faint); margin: 2.25rem 0 0.75rem; }
+    .cmp-dark .cmp-nav .links { color: rgba(251,251,251,.72); }
+    .cmp-nav .links { color: var(--color-ink-soft); display: flex; gap: 1.2rem; }
+    @media (max-width: 700px) { .cmp-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="cmp">
+    <h1>Namensvergleich: drei Varianten, jeweils als Überschrift und als Logo in der Navigation</h1>
+
+    <p class="cmp-label">A: Spotlight, "light" kursiv</p>
+    <div class="cmp-row">
+      <div class="cmp-box cmp-light">
+        <div class="cmp-name">Spot<em>light</em></div>
+        <div class="cmp-nav"><span class="logo">Spot<em>light</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+      <div class="cmp-box cmp-dark">
+        <div class="cmp-name">Spot<em>light</em></div>
+        <div class="cmp-nav"><span class="logo">Spot<em>light</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+    </div>
+
+    <p class="cmp-label">B: Alev Ayhan, Nachname kursiv</p>
+    <div class="cmp-row">
+      <div class="cmp-box cmp-light">
+        <div class="cmp-name">Alev <em>Ayhan</em></div>
+        <div class="cmp-nav"><span class="logo">Alev <em>Ayhan</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+      <div class="cmp-box cmp-dark">
+        <div class="cmp-name">Alev <em>Ayhan</em></div>
+        <div class="cmp-nav"><span class="logo">Alev <em>Ayhan</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+    </div>
+
+    <p class="cmp-label">C: Alev Ayhan, ganz gerade, mit Spotlight als Zusatz</p>
+    <div class="cmp-row">
+      <div class="cmp-box cmp-light">
+        <div class="cmp-name">Alev Ayhan</div>
+        <div class="cmp-nav"><span class="logo">Alev Ayhan <em>Spotlight</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+      <div class="cmp-box cmp-dark">
+        <div class="cmp-name">Alev Ayhan</div>
+        <div class="cmp-nav"><span class="logo">Alev Ayhan <em>Spotlight</em></span><span class="links"><span>Arbeiten</span><span>Leistungen</span><span>Preise</span></span></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

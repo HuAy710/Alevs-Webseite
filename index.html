@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tagMe — Content Studio Berlin | Fotografie, Video &amp; Social Media</title>
-  <meta name="description" content="tagMe ist ein Berliner Creative Studio für Cafés, Restaurants, Hotels und Beauty-Brands. Fotografie, Reels, Social-Media-Content und Community Management von Alev Ayhan.">
+  <title>spotlight. | Ästhetischer Social-Media-Content für Berlin</title>
+  <meta name="description" content="spotlight produziert ästhetischen Social-Media-Content, Fotografie und Reels für Cafés, Läden und lokale Unternehmen in Berlin. Von Alev Ayhan.">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,7 @@
 
   <!-- ============ LADEANIMATION ============ -->
   <div id="loader" aria-hidden="true">
-    <span class="loader-tag">tagMe</span>
+    <span class="loader-tag">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></span>
   </div>
 
   <!-- ============ SKIP LINK (Barrierefreiheit) ============ -->
@@ -21,11 +21,11 @@
   <!-- ============ NAVIGATION ============ -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="nav-logo" aria-label="tagMe Startseite">tag<span class="nav-logo-accent">Me</span></a>
+      <a href="#top" class="nav-logo" aria-label="spotlight Startseite">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></a>
 
       <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
         <a href="#top" class="nav-link nav-link-home">Start</a>
-        <a href="#arbeiten" class="nav-link">Arbeiten</a>
+        <a href="#arbeiten" class="nav-link">Projekte</a>
         <a href="#leistungen" class="nav-link">Leistungen</a>
         <a href="#preise" class="nav-link">Preise</a>
         <a href="#ueber-mich" class="nav-link">Über mich</a>
@@ -44,14 +44,9 @@
     <section class="hero" id="top" data-page="top">
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="hero-eyebrow reveal-fade">Content Studio · Berlin</p>
-          <h1 class="hero-title reveal-fade">
-            Content, den man <em>gerne</em> taggt.
-          </h1>
+          <h1 class="hero-title reveal-fade">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></h1>
           <p class="hero-text reveal-fade">
-            tagMe erstellt authentische Fotos, Videos und Social-Media-Content für
-            Cafés, Restaurants, Hotels, Beauty-Brands und lokale Unternehmen —
-            mit echtem Blick für das, was deinen Ort besonders macht.
+            Ästhetischer Social-Media-Content für Berlins noch unentdeckte Adressen.
           </p>
           <div class="hero-actions reveal-fade">
             <a href="#arbeiten" class="btn btn-primary">Arbeiten ansehen</a>
@@ -67,255 +62,259 @@
             <img src="images/service-social.jpg" alt="Fertig gestaltete Instagram-Story mit Cappuccino">
           </div>
           <div class="collage-card collage-card-3 reveal-fade">
-            <img src="images/portfolio-milk-pour.jpg" alt="Barista gießt Milchschaum in eine Kaffeetasse">
+            <img src="images/portfolio-espresso-machine.jpg" alt="Espressomaschine mit frisch gezogenem Kaffee auf einer Marmortheke">
           </div>
           <div class="collage-card collage-card-4 reveal-fade">
             <img src="images/portfolio-outdoor-tables.jpg" alt="Marmortische mit Blumen vor einem Berliner Café">
           </div>
           <div class="collage-card collage-card-5 reveal-fade">
-            <img src="images/about-alev.jpg" alt="Alev Ayhan filmt mit einem Gimbal" style="object-position: 62% 30%;">
+            <img src="images/service-foto.jpg" alt="Nahaufnahme eines Espressos, der in eine Tasse läuft">
           </div>
         </div>
       </div>
-
-      <button class="scroll-indicator" id="scrollIndicator" aria-label="Nach unten scrollen">
-        <span class="scroll-indicator-line"></span>
-        <span class="scroll-indicator-text">scroll</span>
-      </button>
     </section>
 
-    <!-- ============ BRANCHEN MARQUEE ============ -->
-    <section class="industries" aria-label="Branchen, für die tagMe arbeitet" data-page="top">
-      <!-- Der Inhalt ist absichtlich 8x wiederholt: eine einzelne Spur muss
-           breiter sein als der breiteste denkbare Bildschirm, sonst entsteht
-           beim Loopen eine sichtbare Lücke, sobald sie nicht mehr nachkommt.
-           aria-hidden auf .marquee, da es rein dekorativ ist (Zusammenfassung
-           steht bereits im aria-label der Section). -->
+    <!-- ============ BRANCHEN-BANNER ============ -->
+    <section class="industries" aria-label="Branchen: Cafés, Einzelhandel, Beauty, Praxen, Fitness, Sport, Handwerk, Hotels" data-page="top">
+      <!-- Vier identische Gruppen: die Spur wandert um genau eine Gruppe
+           (-25 %) und springt dann unsichtbar zurück. Eine Gruppe allein ist
+           breiter als ein typischer Bildschirm, drei bleiben immer sichtbar
+           übrig, dadurch entsteht nie eine Lücke. -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Cafés</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Restaurants</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Hotels</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Beauty</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lifestyle</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Lokale Unternehmen</span>
-          <span class="dot" aria-hidden="true">·</span>
+          <ul class="marquee-group"><li>Cafés</li><li>Einzelhandel</li><li>Beauty</li><li>Praxen</li><li>Fitness</li><li>Sport</li><li>Handwerk</li><li>Hotels</li></ul>
+          <ul class="marquee-group"><li>Cafés</li><li>Einzelhandel</li><li>Beauty</li><li>Praxen</li><li>Fitness</li><li>Sport</li><li>Handwerk</li><li>Hotels</li></ul>
+          <ul class="marquee-group"><li>Cafés</li><li>Einzelhandel</li><li>Beauty</li><li>Praxen</li><li>Fitness</li><li>Sport</li><li>Handwerk</li><li>Hotels</li></ul>
+          <ul class="marquee-group"><li>Cafés</li><li>Einzelhandel</li><li>Beauty</li><li>Praxen</li><li>Fitness</li><li>Sport</li><li>Handwerk</li><li>Hotels</li></ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ PORTFOLIO / ARBEITEN ============ -->
+    <!-- ============ STARTSEITEN-TEXT ============ -->
+    <section class="intro" data-page="top">
+      <div class="section-inner">
+        <p class="intro-statement reveal-fade">
+          Es gibt so viele großartige lokale Unternehmen, die einfach übersehen werden. Nicht, weil ihnen etwas fehlt, sondern weil niemand sie richtig <em>ins Licht</em> rückt. Genau das machen wir.
+        </p>
+
+        <div class="intro-body">
+          <p class="intro-text reveal-fade">
+            <span class="brand">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></span> produziert durchdachten Content für Cafés, Läden und lokale Unternehmen. Content, der den Charakter deines Ortes einfängt und die Menschen anzieht, die wirklich zu dir passen.
+          </p>
+
+          <div class="intro-list reveal-fade">
+            <h2 class="intro-list-title">Was wir machen</h2>
+            <ul>
+              <li>Social-Media-Content, der zu deiner Marke passt</li>
+              <li>Fotografie &amp; Storytelling mit Liebe zum Detail</li>
+              <li>Eine Präsenz, die im Gedächtnis bleibt</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROJEKTE ============ -->
     <section class="portfolio" id="arbeiten" data-page="arbeiten">
       <div class="section-inner">
-        <p class="eyebrow reveal-fade">Arbeiten</p>
-        <h2 class="section-title reveal-fade">Ausgewählte Projekte</h2>
-        <p class="section-lead reveal-fade">
-          Ein Einblick in Content, den wir für Berliner Cafés produziert haben —
-          von Fotografie über Food-Nahaufnahmen bis zu fertigen Social-Media-Posts.
-        </p>
+        <h2 class="section-title reveal-fade">Projekte</h2>
 
-        <div class="portfolio-grid">
+        <!-- Projekt 1: Text rechts, Fotos links -->
+        <article class="project project-reverse">
+          <div class="project-info">
+            <h3 class="project-name">Coffee Cult</h3>
+            <p class="project-meta">Bergmannkiez</p>
+            <a class="project-ig" href="https://www.instagram.com/coffeecult.bergmannstr/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6"/></svg><span>@coffeecult.bergmannstr</span></a>
+          </div>
+          <ul class="project-gallery" aria-label="Fotos Coffee Cult">
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Standort &amp; Markenfotografie">
+                <img src="images/Cult/portfolio-storefront.jpg" alt="Café-Fassade mit grüner Markise in Berlin" width="1066" height="1600" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-01.jpeg" alt="Instagram-Post: Cappuccino von oben auf einem grünen Tisch mit dem Spruch Weil guter Kaffee nie lange in der Tasse bleibt" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Produktfotografie">
+                <img src="images/Cult/portfolio-espresso-machine.jpg" alt="Espressomaschine mit frisch gezogenem Kaffee auf einer Marmortheke" width="1066" height="1600" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-02.jpeg" alt="Instagram-Story: Latte im Glas auf einem Marmortisch mit dem Text Friday Fuel" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Lifestyle Content">
+                <img src="images/Cult/portfolio-outdoor-tables.jpg" alt="Marmortische mit Blumen vor einem Berliner Café" width="1066" height="1600" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-03.jpeg" alt="Instagram-Story: Gäste mit Kaffee an Tischen auf der Terrasse" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/service-social.jpg" alt="Fertig gestaltete Instagram-Story mit Cappuccino und der Überschrift Weekend Plans" width="900" height="1600" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-04.jpeg" alt="Instagram-Story: Zeitung auf dem Terrassentisch neben einer Tasse Kaffee" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-05.jpeg" alt="Instagram-Story: zwei Gläser auf einem grünen Marmortisch mit dem Text Best Review" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-06.jpeg" alt="Instagram-Post: Gäste auf der Terrasse mit dem Text Summer on our terrace" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-07.jpeg" alt="Instagram-Post: Coffee-Cult-Becher unter der Espressomaschine" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Social-Media-Grafik">
+                <img src="images/Cult/cult-08.jpeg" alt="Instagram-Post: lila Ube Latte und Magic Smoothie auf einem Tablett" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+          </ul>
+        </article>
 
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-storefront.jpg" alt="Café-Fassade mit grüner Markise in Berlin" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Standort &amp; Markenfotografie</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-milk-pour.jpg" alt="Barista gießt Milchschaum in eine Kaffeetasse" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Foto &amp; Video</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-espresso-machine.jpg" alt="Espressomaschine mit frisch gezogenem Kaffee auf einer Marmortheke" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Produktfotografie</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-outdoor-tables.jpg" alt="Marmortische mit Blumen vor einem Berliner Café" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Lifestyle Content</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-pastry-case.jpg" alt="Vitrine mit Gebäck und handgeschriebenem Lemon-Cheesecake-Schild" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Food-Fotografie</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-dessert-case.jpg" alt="Kuchenvitrine mit Beerentorte und Honigkuchen" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Food-Fotografie</span>
-            </figcaption>
-          </figure>
-
-          <figure class="portfolio-item reveal-fade">
-            <img src="images/portfolio-magazine-table.jpg" alt="Gemütlicher Fensterplatz mit Magazin, Kaffee und Tulpe" loading="lazy">
-            <figcaption class="portfolio-caption">
-              <span class="portfolio-brand">Coffee Cult</span>
-              <span class="portfolio-service">Ambiente Content</span>
-            </figcaption>
-          </figure>
-
-        </div>
+        <!-- Projekt 2: Text links, Fotos rechts -->
+        <article class="project">
+          <div class="project-info">
+            <h3 class="project-name">La Grappa</h3>
+            <p class="project-meta">Rathaus Neukölln</p>
+            <a class="project-ig" href="https://www.instagram.com/lagrappa.neukoelln/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6"/></svg><span>@lagrappa.neukoelln</span></a>
+          </div>
+          <ul class="project-gallery" aria-label="Fotos La Grappa">
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/grappa-01.jpeg" alt="Instagram-Story: Limonade mit Minze und Zitrone auf einem Terrassentisch" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/4.jpg" alt="Instagram-Post: Aperol Spritz auf einer Terrasse" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/7.jpg" alt="Instagram-Post: italienisches Mandelgebäck in der Auslage" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 0">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/11.jpg" alt="Instagram-Post: Espresso Martini im Glas" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/2.jpg" alt="Instagram-Post: selbstgemachte Limonade im Glas mit Minze und Zitrone" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/grappa-02.jpeg" alt="Instagram-Post: Aperitivo-Glas mit dem Text Weekends taste better with aperitivo" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/9.jpg" alt="Instagram-Post: Mandelgebäck auf einem Blech" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 1">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/15.jpg" alt="Instagram-Post: Barista mit Espresso Martini" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/grappa-03.jpeg" alt="Instagram-Story: Gelato in der Waffel, gehalten von einer Mitarbeiterin" width="1080" height="1920" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/6.jpg" alt="Instagram-Post: Caramel Iced Latte auf einem Marmortisch" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/10.jpg" alt="Instagram-Post: Cappuccino und Gelato" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+            <li class="project-tile" style="--i: 2">
+              <button class="gallery-item" type="button" data-caption="Instagram-Post">
+                <img src="images/Grappa/grappa-04.jpeg" alt="Instagram-Post: Gäste sitzen bei Getränken auf der Terrasse mit dem Text La Grappa moments, made together" width="1080" height="1350" loading="lazy">
+              </button>
+            </li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <!-- ============ LEISTUNGEN ============ -->
+    <!-- ============ LEISTUNGEN (nur Text) ============ -->
     <section class="services" id="leistungen" data-page="leistungen">
       <div class="section-inner">
-        <p class="eyebrow reveal-fade">Leistungen</p>
         <h2 class="section-title reveal-fade">Was ich anbiete</h2>
-        <p class="section-lead reveal-fade">
-          Von der ersten Idee bis zum fertigen Post — alles aus einer Hand.
+        <p class="section-lead section-lead-wide reveal-fade">
+          Von der ersten Idee bis zum fertigen Post, alles aus einer Hand. Ich begleite dich von der Strategie bis zur täglichen Umsetzung, damit dein Social Media wirklich zu dir passt.
         </p>
 
-        <div class="services-features">
-          <article class="service-feature reveal-fade">
-            <div class="service-media">
-              <img src="images/service-foto.jpg" alt="Nahaufnahme eines Espressos, der in eine Tasse läuft" loading="lazy">
-            </div>
-            <div class="service-copy">
-              <span class="service-tag">Foto Content</span>
-              <h3 class="service-title">Bilder, die den Unterschied machen</h3>
-              <p class="service-text">Professionelle Fotos für Social Media, Webseiten, Google Business und digitale Kampagnen — mit echtem Blick für das Detail, das deinen Ort besonders macht.</p>
+        <div class="service-list">
+          <article class="service-row reveal-fade">
+            <h3 class="service-name">Foto Content</h3>
+            <div class="service-body">
+              <p class="service-headline">Bilder, die den Unterschied machen</p>
+              <p class="service-text">Professionelle Fotos für Social Media, Webseiten, Google Business und digitale Kampagnen.</p>
             </div>
           </article>
 
-          <article class="service-feature service-feature-reverse reveal-fade">
-            <div class="service-media">
-              <img src="images/service-video.jpg" alt="Sonniger Berliner Gehsteig mit Fahrrädern und Iced-Coffee-Tafel vor einem Café" loading="lazy">
-            </div>
-            <div class="service-copy">
-              <span class="service-tag">Video &amp; Reels</span>
-              <h3 class="service-title">Bewegtbild, das im Feed hängen bleibt</h3>
-              <p class="service-text">Kurze, moderne Videos und Reels, die Aufmerksamkeit erzeugen und dein Unternehmen authentisch zeigen — geschnitten für die Geschwindigkeit von Instagram &amp; TikTok.</p>
+          <article class="service-row reveal-fade">
+            <h3 class="service-name">Videos &amp; Reels</h3>
+            <div class="service-body">
+              <p class="service-headline">Bewegtbild, das im Feed hängen bleibt</p>
+              <p class="service-text">Kurze, moderne Videos und Reels, die Aufmerksamkeit erzeugen und dein Unternehmen authentisch zeigen, geschnitten für die Geschwindigkeit von Instagram &amp; TikTok.</p>
             </div>
           </article>
 
-          <article class="service-feature reveal-fade">
-            <div class="service-media">
-              <img src="images/service-social.jpg" alt="Fertig gestaltete Instagram-Story mit Cappuccino und der Überschrift Weekend Plans" loading="lazy">
-            </div>
-            <div class="service-copy">
-              <span class="service-tag">Social Media Content</span>
-              <h3 class="service-title">Planung und Gestaltung, die zu dir passt</h3>
-              <p class="service-text">Von der Content-Strategie bis zum fertigen Post: regelmäßiger, durchdachter Content für Instagram, TikTok und LinkedIn — abgestimmt auf deine Marke und Zielgruppe.</p>
+          <article class="service-row reveal-fade">
+            <h3 class="service-name">Social Media Content</h3>
+            <div class="service-body">
+              <p class="service-headline">Planung und Gestaltung, die zu dir passt</p>
+              <p class="service-text">Von der Content-Strategie bis zum fertigen Post: regelmäßiger, durchdachter Content für deine sozialen Netzwerke, wie Instagram, TikTok und LinkedIn, abgestimmt auf deine Marke und Zielgruppe.</p>
+              <ul class="service-points">
+                <li>Social-Media-Strategie</li>
+                <li>Content-Säulen &amp; Formate definieren</li>
+                <li>Instagram-Profil-Optimierung</li>
+                <li>Feed-Gestaltung &amp; Highlight-Cover</li>
+                <li>Beiträge &amp; Reels</li>
+                <li>Storys</li>
+              </ul>
             </div>
           </article>
 
-          <article class="service-feature service-feature-reverse reveal-fade">
-            <div class="service-media">
-              <img src="images/service-community.jpg" alt="Gäste sitzen entspannt in einem Café bei Kaffee und Croissant" loading="lazy">
-            </div>
-            <div class="service-copy">
-              <span class="service-tag">Management &amp; Community</span>
-              <h3 class="service-title">Betreuung, die deine Community spürt</h3>
-              <p class="service-text">Laufende Content-Planung, Veröffentlichung sowie authentische Kommunikation mit deiner Community — Kommentare, Nachrichten und der Aufbau einer aktiven Online-Community.</p>
+          <article class="service-row reveal-fade">
+            <h3 class="service-name">Management &amp; Community</h3>
+            <div class="service-body">
+              <p class="service-headline">Betreuung, die deine Community spürt</p>
+              <p class="service-text">Laufende Content-Planung, Veröffentlichung sowie authentische Kommunikation mit deiner Community: Kommentare, Nachrichten und der Aufbau einer aktiven Online-Community.</p>
+              <ul class="service-points">
+                <li>Community Management</li>
+                <li>Reporting &amp; Analyse</li>
+                <li>Laufende Optimierung &amp; Weiterentwicklung</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -325,39 +324,36 @@
     <!-- ============ PREISE ============ -->
     <section class="pricing" id="preise" data-page="preise">
       <div class="section-inner">
-        <p class="eyebrow reveal-fade">Preise</p>
-        <h2 class="section-title reveal-fade">Pakete &amp; Preise</h2>
-        <p class="section-lead reveal-fade">
-          Klar kalkulierbar statt Kleingedrucktem: drei Pakete, die mit deinem
-          Auftritt mitwachsen. Alle Preise gelten ausschließlich für Instagram —
-          weitere Plattformen sind individuell verhandelbar.
+        <h2 class="section-title reveal-fade">Meine Pakete</h2>
+        <p class="section-lead section-lead-wide reveal-fade">
+          Jeder Ort ist anders, deshalb wachsen meine Pakete mit dir mit. Vom Einstieg bis zur langfristigen Betreuung.
         </p>
 
-        <div class="pricing-grid">
+        <div class="pricing-grid pricing-grid-3">
 
           <article class="price-card reveal-fade">
-            <span class="price-badge">Start</span>
+            <span class="price-badge">Der Start</span>
             <h3 class="price-title">Paket 1: Aufbau</h3>
-            <p class="price-amount">599&nbsp;€<span>/Monat · 3 Monate</span></p>
+            <p class="price-amount">499&nbsp;€<span>/Monat · 1. Monat</span></p>
             <ul class="price-features">
               <li>Social-Media-Strategie</li>
               <li>Content-Säulen &amp; Formate definieren</li>
               <li>Instagram-Profil optimieren</li>
               <li>Feed aufräumen &amp; Highlight-Cover erstellen</li>
-              <li>4 Beiträge/Reels</li>
-              <li>8 Storys</li>
+              <li>4 Reels</li>
+              <li>8 Visuals (Feed oder Story)</li>
               <li>Community Management</li>
             </ul>
           </article>
 
           <article class="price-card reveal-fade">
-            <span class="price-badge">ab Monat 4</span>
+            <span class="price-badge">Ab Monat 2</span>
             <h3 class="price-title">Paket 2: Präsenz</h3>
-            <p class="price-amount">449&nbsp;€<span>/Monat</span></p>
+            <p class="price-amount">399&nbsp;€<span>/Monat · ab Monat 2</span></p>
             <ul class="price-features">
               <li>Laufende Betreuung</li>
-              <li>4 Beiträge/Reels</li>
-              <li>8 Storys</li>
+              <li>4 Reels</li>
+              <li>8 Visuals (Feed oder Story)</li>
               <li>Community Management</li>
               <li>Reporting</li>
               <li>Kleinere Optimierungen</li>
@@ -367,11 +363,11 @@
           <article class="price-card price-card-highlight reveal-fade">
             <span class="price-badge">Für mehr Sichtbarkeit</span>
             <h3 class="price-title">Paket 3: Wachstum</h3>
-            <p class="price-amount">899&nbsp;€<span>/Monat</span></p>
+            <p class="price-amount">749&nbsp;€<span>/Monat</span></p>
             <ul class="price-features">
               <li>Weiterentwicklung der Strategie</li>
-              <li>8 Beiträge/Reels</li>
-              <li>Bis zu 20 Storys</li>
+              <li>6 Reels</li>
+              <li>Bis zu 15 Visuals (Feed oder Story)</li>
               <li>Community Management</li>
               <li>Reporting &amp; Analyse</li>
               <li>Regelmäßige Optimierung</li>
@@ -380,19 +376,35 @@
 
         </div>
 
-        <div class="pricing-dots" id="pricingDots">
-          <span class="pricing-dot is-active" data-index="0" role="button" tabindex="0" aria-label="Paket 1 anzeigen"></span>
-          <span class="pricing-dot" data-index="1" role="button" tabindex="0" aria-label="Paket 2 anzeigen"></span>
-          <span class="pricing-dot" data-index="2" role="button" tabindex="0" aria-label="Paket 3 anzeigen"></span>
+        <h3 class="pricing-subtitle reveal-fade">Einmalig buchbar</h3>
+
+        <div class="pricing-grid pricing-grid-2">
+
+          <article class="price-card reveal-fade">
+            <h3 class="price-title">Shooting</h3>
+            <p class="price-amount">299&nbsp;€<span>einmalig · ca. 2-3 Std. vor Ort</span></p>
+            <ul class="price-features">
+              <li>20 professionelle Fotos</li>
+              <li>Optional verhandelbar: kurze Videos/Clips für individuelle Nutzung</li>
+              <li>Freie Nutzung für Social Media, Website, Google Business &amp; Co.</li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal-fade">
+            <h3 class="price-title">Shooting &amp; Visuals</h3>
+            <p class="price-amount">549&nbsp;€<span>einmalig · ca. 2-3 Std. vor Ort</span></p>
+            <ul class="price-features">
+              <li>Shooting vor Ort (ca. 2-3 Std.)</li>
+              <li>12 fertige Visuals (Foto) für Instagram, inkl. Bildauswahl, Bearbeitung &amp; Text-Layout</li>
+              <li>Direkt einsatzbereit für deinen Feed</li>
+            </ul>
+          </article>
+
         </div>
 
         <p class="pricing-note reveal-fade">
-          Paket 1 bildet die Grundlage der ersten drei Monate, danach läuft die
-          Betreuung automatisch in Paket 2 weiter. Paket 3 eignet sich, wenn von
-          Anfang an mehr Reichweite gefragt ist. Optional zubuchbar: Animationen &amp;
-          Motion Graphics, Meta Ads, Influencer-Kooperationen, Produkt-/Imagevideos,
-          Logo- &amp; Corporate-Design, Fotoshooting mit Studio-Equipment, Drucksachen,
-          Website-Erstellung — nach Aufwand oder als Festpreis.
+          Unsicher, welches Paket zu dir passt? Lass uns in einem kurzen Gespräch herausfinden, was dein Ort braucht und ein individuelles Paket schnüren.
+          <a href="#kontakt" class="pricing-note-link">Gespräch anfragen</a>
         </p>
       </div>
     </section>
@@ -400,7 +412,6 @@
     <!-- ============ ARBEITSPROZESS ============ -->
     <section class="process" id="prozess" data-page="leistungen">
       <div class="section-inner">
-        <p class="eyebrow reveal-fade">Ablauf</p>
         <h2 class="section-title reveal-fade">So arbeiten wir zusammen</h2>
 
         <ol class="process-list">
@@ -433,25 +444,22 @@
       <div class="section-inner about-inner">
         <div class="about-visual reveal-fade">
           <img
-            src="images/about-alev.jpg"
-            alt="Alev Ayhan, Gründerin von tagMe, filmt mit einem Gimbal auf einem Branchenevent"
+            src="images/Alev%20Ayhan.jpeg"
+            alt="Alev Ayhan, Gründerin von spotlight"
+            width="720" height="900"
             loading="lazy"
-            style="object-position: 62% 42%;"
           >
         </div>
 
         <div class="about-copy">
-          <p class="eyebrow reveal-fade">Über mich</p>
           <h2 class="section-title reveal-fade">Hallo, ich heiße Alev.</h2>
           <p class="about-text reveal-fade">
             Seit über fünf Jahren arbeite ich im Social-Media-Bereich eines
-            Großkonzerns. Seit einigen Monaten begleite ich zusätzlich Gastronominnen
-            und Gastronomen dabei, ihre Geschichte sichtbar zu machen und einen
-            professionellen Auftritt auf Instagram, TikTok und LinkedIn aufzubauen.
+            Großkonzerns. Seit einigen Monaten begleite ich zusätzlich kleine Unternehmen, ihre Geschichte sichtbar zu machen und einen professionellen Auftritt auf verschiedenen sozialen Netzwerken aufzubauen.
           </p>
           <p class="about-text reveal-fade">
             Von der Strategie bis zur Umsetzung: Ich übernehme Content-Planung,
-            Fotografie, Reels, Grafiken, Texte und Community-Management — für mehr
+            Fotografie, Reels, Grafiken, Texte und Community-Management, für mehr
             Sichtbarkeit, mehr Gäste und mehr Persönlichkeit.
           </p>
           <a href="#kontakt" class="btn btn-outline reveal-fade">Lern mich kennen</a>
@@ -462,10 +470,9 @@
     <!-- ============ CALL TO ACTION ============ -->
     <section class="cta" data-page="kontakt">
       <div class="section-inner cta-inner">
-        <h2 class="cta-title reveal-fade">Bereit, dein Business sichtbar zu machen?</h2>
+        <h2 class="cta-title reveal-fade">Bereit, ins <em>Licht</em> zu rücken?</h2>
         <p class="cta-text reveal-fade">
-          Erzähl mir von deinem Projekt und lass uns gemeinsam Content entwickeln,
-          den deine Community gerne sieht, teilt und taggt.
+          Erzähl mir von deinem Ort und lass uns gemeinsam Content entwickeln, der dich auf Social Media sichtbarer macht.
         </p>
         <a href="#kontakt" class="btn btn-primary btn-large reveal-fade">Projekt anfragen</a>
       </div>
@@ -475,11 +482,10 @@
     <section class="contact" id="kontakt" data-page="kontakt">
       <div class="section-inner contact-inner">
         <div class="contact-intro">
-          <p class="eyebrow reveal-fade">Kontakt</p>
           <h2 class="section-title reveal-fade">Lass uns loslegen</h2>
           <p class="section-lead reveal-fade">
-            Fülle das Formular aus — dein Mail-Programm öffnet sich mit einer
-            vorbereiteten Nachricht an mich.
+            Schreib mir eine Nachricht. Dein Mail-Programm öffnet sich mit einer
+            vorbereiteten E-Mail an mich.
           </p>
 
           <!-- KONTAKTDATEN: Hier später austauschen -->
@@ -496,8 +502,8 @@
           <!-- ENDE KONTAKTDATEN -->
 
           <a
-            href="https://wa.me/4917622025926?text=Hallo%20Alev%2C%20ich%20interessiere%20mich%20f%C3%BCr%20tagMe%20und%20h%C3%A4tte%20gerne%20mehr%20Infos!"
-            class="btn btn-whatsapp reveal-fade"
+            href="https://wa.me/4917622025926?text=Hallo%20Alev%2C%20ich%20interessiere%20mich%20f%C3%BCr%20spotlight%20und%20h%C3%A4tte%20gerne%20mehr%20Infos!"
+            class="btn btn-outline btn-whatsapp reveal-fade"
             target="_blank"
             rel="noopener noreferrer"
             data-contact="whatsapp"
@@ -526,26 +532,17 @@
           </div>
 
           <div class="form-row">
+            <label for="phone">Telefonnummer</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+
+          <div class="form-row">
             <label for="instagram">Instagram-Name</label>
             <input type="text" id="instagram" name="instagram" placeholder="@deinunternehmen">
           </div>
 
           <div class="form-row">
-            <label for="service">Gewünschte Leistung <span aria-hidden="true">*</span></label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Bitte auswählen</option>
-              <option value="Foto Content">Foto Content</option>
-              <option value="Video & Reels">Video &amp; Reels</option>
-              <option value="Social Media Content">Social Media Content</option>
-              <option value="Social Media Management">Social Media Management</option>
-              <option value="Community Management">Community Management</option>
-              <option value="Mehrere Leistungen">Mehrere Leistungen</option>
-            </select>
-            <span class="form-error" id="error-service" role="alert"></span>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Projektbeschreibung <span aria-hidden="true">*</span></label>
+            <label for="message">Nachricht <span aria-hidden="true">*</span></label>
             <textarea id="message" name="message" rows="4" required></textarea>
             <span class="form-error" id="error-message" role="alert"></span>
           </div>
@@ -562,8 +559,8 @@
   <footer class="footer">
     <div class="section-inner footer-inner">
       <div class="footer-brand">
-        <span class="footer-logo">tag<span class="nav-logo-accent">Me</span></span>
-        <p>Alev Ayhan — Berlin</p>
+        <span class="footer-logo">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></span>
+        <p>Alev Ayhan, Berlin</p>
       </div>
 
       <div class="footer-links">
@@ -577,8 +574,28 @@
         <a href="#datenschutz" id="datenschutzLink">Datenschutz</a>
       </div>
     </div>
-    <p class="footer-bottom">© <span id="year"></span> tagMe · Alev Ayhan · Berlin</p>
+    <p class="footer-bottom">© <span id="year"></span> <span class="brand">spot<em>light</em><i class="brand-dot" aria-hidden="true"></i></span>, Alev Ayhan, Berlin</p>
   </footer>
+
+  <!-- ============ FOTO-LIGHTBOX ============ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ansehen">
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Schließen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <button class="lightbox-arrow lightbox-prev" type="button" id="lightboxPrev" aria-label="Vorheriges Foto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImg" alt="">
+      <figcaption class="lightbox-caption">
+        <span id="lightboxText"></span>
+        <span id="lightboxCount" class="lightbox-count"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox-arrow lightbox-next" type="button" id="lightboxNext" aria-label="Nächstes Foto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+    </button>
+  </dialog>
 
   <!-- ============ IMPRESSUM / DATENSCHUTZ PLATZHALTER ============ -->
   <div class="legal-modal" id="legalModal" hidden>

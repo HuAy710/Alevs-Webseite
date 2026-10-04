@@ -1,5 +1,5 @@
 /* ===================================================================
-   tagMe — script.js
+   Spotlight - script.js
    Vanilla JavaScript, kein Framework, kein Backend.
    =================================================================== */
 
@@ -162,60 +162,93 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -----------------------------------------------------------
-     3b. Preis-Karten: Swipe-Dots mit der Scrollposition abgleichen
+     3b. Projekt-Fotos: Kacheln öffnen sich, sobald sie ins Bild kommen
   ----------------------------------------------------------- */
-  const pricingGrid = document.querySelector('.pricing-grid');
-  const pricingDots = document.querySelectorAll('.pricing-dot');
-
-  if (pricingGrid && pricingDots.length) {
-    const priceCards = pricingGrid.querySelectorAll('.price-card');
-
-    const scrollToCard = (index) => {
-      priceCards[index]?.scrollIntoView({
-        behavior: prefersReducedMotion ? 'auto' : 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
-    };
-
-    pricingDots.forEach(dot => {
-      const goTo = () => scrollToCard(Number(dot.dataset.index));
-      dot.addEventListener('click', goTo);
-      dot.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          goTo();
+  const projectTiles = document.querySelectorAll('.project-tile');
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const tileObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    projectTiles.forEach(tile => tileObserver.observe(tile));
+  } else {
+    projectTiles.forEach(tile => tile.classList.add('is-visible'));
+  }
+
+  /* -----------------------------------------------------------
+     3d. Lightbox: Foto groß ansehen und durchklicken
+     (Pfeiltasten, Wischen, Escape; <dialog> übernimmt den Fokus-Trap)
+  ----------------------------------------------------------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxText = document.getElementById('lightboxText');
+  const lightboxCount = document.getElementById('lightboxCount');
+  let lightboxItems = [];
+  let lightboxIndex = 0;
+
+  const renderLightbox = (animate) => {
+    const item = lightboxItems[lightboxIndex];
+    const img = item.querySelector('img');
+    const apply = () => {
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      lightboxText.textContent = item.dataset.caption || '';
+      lightboxCount.textContent = `${lightboxIndex + 1} / ${lightboxItems.length}`;
+      lightboxImg.classList.remove('is-swapping');
+    };
+    if (animate && !prefersReducedMotion) {
+      lightboxImg.classList.add('is-swapping');
+      setTimeout(apply, 130);
+    } else {
+      apply();
+    }
+  };
+
+  const stepLightbox = (dir) => {
+    lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
+    renderLightbox(true);
+  };
+
+  const closeLightbox = () => lightbox.close();
+
+  if (lightbox) {
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxItems = Array.from(item.closest('.project-gallery').querySelectorAll('.gallery-item'));
+        lightboxIndex = lightboxItems.indexOf(item);
+        renderLightbox(false);
+        lightbox.showModal();
       });
     });
 
-    const syncPricingDots = () => {
-      const gridCenter = pricingGrid.getBoundingClientRect().left + pricingGrid.clientWidth / 2;
-      let closestIndex = 0;
-      let closestDistance = Infinity;
+    document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
+    document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
 
-      priceCards.forEach((card, index) => {
-        const cardCenter = card.getBoundingClientRect().left + card.clientWidth / 2;
-        const distance = Math.abs(cardCenter - gridCenter);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
+    // Klick auf den dunklen Hintergrund schließt
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
 
-      pricingDots.forEach((dot, index) => {
-        dot.classList.toggle('is-active', index === closestIndex);
-      });
-    };
+    lightbox.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') stepLightbox(1);
+      if (event.key === 'ArrowLeft') stepLightbox(-1);
+    });
 
-    let pricingScrollTicking = false;
-    pricingGrid.addEventListener('scroll', () => {
-      if (pricingScrollTicking) return;
-      pricingScrollTicking = true;
-      window.requestAnimationFrame(() => {
-        syncPricingDots();
-        pricingScrollTicking = false;
-      });
+    // Wischen auf Touchgeräten
+    let touchStartX = null;
+    lightbox.addEventListener('touchstart', (event) => {
+      touchStartX = event.touches.length === 1 ? event.touches[0].clientX : null;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const deltaX = event.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) > 50) stepLightbox(deltaX < 0 ? 1 : -1);
     }, { passive: true });
   }
 
@@ -234,17 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -----------------------------------------------------------
-     6. Scroll-Indikator im Hero führt zum nächsten Bereich
-  ----------------------------------------------------------- */
-  const scrollIndicator = document.getElementById('scrollIndicator');
-  if (scrollIndicator) {
-    scrollIndicator.addEventListener('click', () => {
-      const nextSection = document.querySelector('.industries');
-      nextSection?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-    });
-  }
-
-  /* -----------------------------------------------------------
      7. Kontaktformular: Validierung + mailto-Versand
      Kein Backend vorhanden — es wird ein mailto-Link geöffnet.
   ----------------------------------------------------------- */
@@ -257,8 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const validators = {
     name: value => value.trim().length > 1 || 'Bitte gib deinen Namen ein.',
     email: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) || 'Bitte gib eine gültige E-Mail-Adresse ein.',
-    service: value => value.trim().length > 0 || 'Bitte wähle eine Leistung aus.',
-    message: value => value.trim().length > 5 || 'Erzähl uns kurz von deinem Projekt.'
+    message: value => value.trim().length > 5 || 'Schreib mir kurz, worum es geht.'
   };
 
   const showFieldError = (fieldName, message) => {
@@ -292,22 +313,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) {
         formNote.textContent = 'Bitte überprüfe die markierten Felder.';
-        formNote.style.color = 'var(--color-terracotta)';
+        formNote.classList.add('is-error');
         return;
       }
 
       // Formulardaten einsammeln
       const data = Object.fromEntries(new FormData(contactForm).entries());
 
-      const subject = `Projektanfrage von ${data.name}${data.company ? ' (' + data.company + ')' : ''}`;
+      const subject = `Anfrage von ${data.name}${data.company ? ' (' + data.company + ')' : ''}`;
       const bodyLines = [
         `Name: ${data.name}`,
         data.company ? `Unternehmen: ${data.company}` : null,
         `E-Mail: ${data.email}`,
         data.instagram ? `Instagram: ${data.instagram}` : null,
-        `Gewünschte Leistung: ${data.service}`,
+        data.phone ? `Telefon: ${data.phone}` : null,
         '',
-        'Projektbeschreibung:',
+        'Nachricht:',
         data.message
       ].filter(Boolean).join('\n');
 
@@ -315,8 +336,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       window.location.href = mailtoLink;
 
-      formNote.textContent = 'Dein E-Mail-Programm öffnet sich gleich — danke für deine Nachricht!';
-      formNote.style.color = 'var(--color-sage-dark)';
+      formNote.textContent = 'Dein E-Mail-Programm öffnet sich gleich. Danke für deine Nachricht!';
+      formNote.classList.remove('is-error');
     });
 
     // Fehler live entfernen, sobald korrigiert wird
